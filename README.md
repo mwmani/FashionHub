@@ -43,8 +43,10 @@ or
 npx playwright test --env=production
 
 # Docker Integration
+
 **Build and run tests in Docker container:**
 docker compose up --build
+
 **Run only tests container:**
 docker build -t fashionhub-tests .
 docker run --rm fashionhub-tests
