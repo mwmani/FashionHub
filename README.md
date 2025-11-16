@@ -3,19 +3,20 @@ Automated end-to-end testing framework built with Playwright + TypeScript, suppo
 Focus is mostly on quality, maintainability, scalability, and real-world production readiness.
 
 # Key Skills & Tools Demonstrated
-Category	            Tools / Skills
 
-Programming	            JavaScript, TypeScript, Node.js
+Category	         -   Tools / Skills
 
-Automation Framework	Playwright, Page Object Model (POM)
+Programming	         -   JavaScript, TypeScript, Node.js
 
-Testing Types	        Functional, End-to-End, Cross-Browser, API
+Automation Framework -	Playwright, Page Object Model (POM)
 
-Version Control	        Git, GitHub
+Testing Types	     -  Functional, End-to-End, Cross-Browser, API
 
-Reporting	            Playwright HTML Reports, CSV export
+Version Control	     -  Git, GitHub
 
-Environments	        Local, Staging, Production
+Reporting	         -  Playwright HTML Reports, CSV export
+
+Environments	     -  Local, Staging, Production
 
 # Supported Environments
 
