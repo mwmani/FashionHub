@@ -4,17 +4,27 @@ Focus is mostly on quality, maintainability, scalability, and real-world product
 
 # Key Skills & Tools Demonstrated
 Category	            Tools / Skills
+
 Programming	            JavaScript, TypeScript, Node.js
+
 Automation Framework	Playwright, Page Object Model (POM)
+
 Testing Types	        Functional, End-to-End, Cross-Browser, API
+
 Version Control	        Git, GitHub
+
 Reporting	            Playwright HTML Reports, CSV export
+
 Environments	        Local, Staging, Production
 
 # Supported Environments
+
 Environment   	URL
+
 Local	        http://localhost:4000/fashionhub/
+
 Staging	(dummy) https://staging-env/fashionhub/
+
 Production	    https://pocketaces2.github.io/fashionhub/
 
 # Test Cases Implemented
@@ -33,10 +43,13 @@ npx playwright install --with-deps
 npx playwright test
 
 # Run in specific environment
+
 **Local**
 set TEST_ENV=local && npx playwright test
+
 **Staging**
 set TEST_ENV=staging && npx playwright test
+
 **Production**
 npx playwright test
 or
