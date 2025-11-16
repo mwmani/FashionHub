@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  fashionhub-app:
+    image: pocketaces2/fashionhub-demo-app:latest
+    container_name: fashionhub-app
+    ports:
+      - "4000:4000"
+    restart: unless-stopped
+
+  playwright-tests:
+    image: mcr.microsoft.com/playwright:v1.48.0-focal
+    container_name: playwright-tests
+    working_dir: /tests
+    volumes:
+      - ./:/tests
+    command: >
+      bash -c "
+        npm install &&
+        npx playwright install --with-deps &&
+        npx playwright test
+      "
+    depends_on:
+      - fashionhub-app

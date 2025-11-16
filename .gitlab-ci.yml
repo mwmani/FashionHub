@@ -1,0 +1,74 @@
+image: mcr.microsoft.com/playwright:v1.48.0-focal
+
+stages:
+  - install
+  - test
+
+cache:
+  paths:
+    - node_modules/
+
+# Install dependencies once
+install_dependencies:
+  stage: install
+  script:
+    - npm ci
+    - npx playwright install --with-deps
+  artifacts:
+    paths:
+      - node_modules/
+    expire_in: 1h
+  tags:
+    - docker
+
+# Run tests on LOCAL
+test_local:
+  stage: test
+  variables:
+    TEST_ENV: "local"
+  script:
+    - echo "Running tests on LOCAL"
+    - npx playwright test --reporter=html
+  artifacts:
+    paths:
+      - test-report/
+      - open_prs.csv
+    when: always
+  needs: ["install_dependencies"]
+  tags:
+    - docker
+  allow_failure: true   # optional, local env may not exist in CI
+
+# Run tests on STAGING
+test_staging:
+  stage: test
+  variables:
+    TEST_ENV: "staging"
+  script:
+    - echo "Running tests on STAGING"
+    - npx playwright test --reporter=html
+  artifacts:
+    paths:
+      - test-report/
+      - open_prs.csv
+    when: always
+  needs: ["install_dependencies"]
+  tags:
+    - docker
+
+# Run tests on PRODUCTION
+test_production:
+  stage: test
+  variables:
+    TEST_ENV: "production"
+  script:
+    - echo "Running tests on PRODUCTION"
+    - npx playwright test --reporter=html
+  artifacts:
+    paths:
+      - test-report/
+      - open_prs.csv
+    when: always
+  needs: ["install_dependencies"]
+  tags:
+    - docker
