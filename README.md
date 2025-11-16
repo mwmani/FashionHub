@@ -20,13 +20,13 @@ Environments	     -  Local, Staging, Production
 
 # Supported Environments
 
-Environment   	URL
+Environment    -	URL
 
-Local	        http://localhost:4000/fashionhub/
+Local	       - http://localhost:4000/fashionhub/
 
-Staging	(dummy) https://staging-env/fashionhub/
+Staging	(dummy)- https://staging-env/fashionhub/
 
-Production	    https://pocketaces2.github.io/fashionhub/
+Production	   - https://pocketaces2.github.io/fashionhub/
 
 # Test Cases Implemented
 1.  As a tester, I want to make sure there are no console errors when you visit
@@ -37,10 +37,12 @@ Production	    https://pocketaces2.github.io/fashionhub/
     Output is a list of PR in CSV format with PR name, created date and author.
 
 # Install dependencies
+
 npm install
 npx playwright install --with-deps
 
 # Run all tests
+
 npx playwright test
 
 # Run in specific environment
@@ -75,7 +77,7 @@ CSV output of open GitHub PRs: open_prs.csv
 ## Pull the image from dockerhub using below command:
 docker pull pocketaces2/fashionhub-demo-app 
 
-## Run the docker container below command:
+## Run the docker container using below command:
 docker run -p 4000:4000 pocketaces2/fashionhub-demo-app:latest
 
 ## Navigate to the homepage locally using below link on any browser:
