@@ -1,5 +1,5 @@
 # FashionHub QA Automation Framework
-Automated end-to-end testing framework built with Playwright + TypeScript, supporting multi-environment execution, Docker integration, and CI/CD pipelines.
+Automated end-to-end testing framework built with Playwright + TypeScript, supporting multi-environment execution, Docker integration.
 Focus is mostly on quality, maintainability, scalability, and real-world production readiness.
 
 # Key Skills & Tools Demonstrated
